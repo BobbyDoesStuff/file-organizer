@@ -1,0 +1,13 @@
+{
+    "directories": {
+      "media": "media",
+      "documents": "documents",
+      "other": "other"
+    },
+    "file_types": {
+      "media": ["jpg", "jpeg", "png", "mp4", "avi"],
+      "documents": ["pdf", "docx", "xlsx"],
+      "other": ["*"]
+    },
+    "ignore_list": ["ignore_me.txt", "temp_file.txt"]
+  }
