@@ -56,7 +56,7 @@ class DataOrganizer:
         """Performs the file organization as required."""
         # Converts the input string into a pathlib.Path object, which is
         # way easier and cleaner to handle than a string file path.
-        source_directory = Path(source_directory)
+        source_directory = Path(source_directory)     
         for file_path in self.get_all_files(source_directory):
             if file_path.name in self.ignore_list:
                 # File is in the ignored list - move on.
