@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+from python_terraform import Terraform
 import os
 import subprocess
 
@@ -65,10 +66,12 @@ class TerraformGenerator:
         with open("create_bucket.tf", "w") as f:
             f.write(tf_content)
 
-    #def apply_terraform(self):
-    #    self.set_aws_credentials()
-    #    subprocess.run(["terraform", "init"], check=True)
-    #    subprocess.run(["terraform", "apply", "-auto-approve"], check=True)
+    def apply_terraform(self):
+        #self.set_aws_credentials()
+
+        tf = Terraform()  # Use the current working directory
+        tf.init()
+        tf.apply(skip_plan=True)  # skip_plan=True is equivalent to '-auto-approve'
 
 tf_generator = TerraformGenerator()
 tf_generator.generate_terraform_script()
