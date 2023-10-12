@@ -5,7 +5,7 @@
       "other": "other"
     },
     "file_types": {
-      "media": ["jpg", "jpeg", "png", "mp4", "avi"],
+      "media": ["jpg", "jpeg", "png", "mp4", "mp3", "avi"],
       "documents": ["pdf", "docx", "xlsx"],
       "other": ["*"]
     },
