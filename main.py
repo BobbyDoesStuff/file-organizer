@@ -11,7 +11,7 @@ import click
 
 from data_organizer.organizer import DataOrganizer
 from pathlib import Path
-from s3_sender.s3_uploader import S3Uploader, setup_logging
+from s3_uploader.s3_uploader import S3Uploader, setup_logging
 
 def set_up_logger() -> None:
     """
