@@ -4,3 +4,4 @@ pytest
 botocore
 retry
 python-dotenv
+python-terraform
