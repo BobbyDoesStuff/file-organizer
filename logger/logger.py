@@ -8,8 +8,8 @@ class LoggerManager:
 	def _setup(self):
 		# Configuration for console logging
 		log_format="<cyan>{time:YYYY-MM-DD HH:mm:ss zz}</cyan> " \
-            "|<level>{level}</level>| <yellow>Line{line: >4} " \
-            "({file}):</yellow> <level>{message}</level> "
+            		"|<level>{level}</level>| <yellow>Line{line: >4} " \
+            		"({file}):</yellow> <level>{message}</level> "
 		logger.remove()  # Remove all existing handlers
 		logger.add(
 			sys.stdout,
