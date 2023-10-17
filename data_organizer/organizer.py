@@ -1,13 +1,14 @@
 """The key functionality of the file organizer is based in this module."""
 import json
-import logging
+#import logging
 import shutil
+from logger.logger import default_logger as logger
 from pathlib import Path
 from typing import Any, Callable, Optional
 
 
 # Get the logger instance from the entrypoint file.
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
 def handle_error(errors: Exception | tuple[Exception], message_format: str) -> Callable:
@@ -67,6 +68,7 @@ class DataOrganizer:
             self.move_file(file_path, dest_path)
         # Delete any unused sub-directories after processing.
         self.remove_empty_subdirectories(source_directory)
+        logger.info("Files organized successfully")
 
     @handle_error(OSError, "Error getting all files: {}")
     def get_all_files(self, source_directory: Path) -> list[Path]:

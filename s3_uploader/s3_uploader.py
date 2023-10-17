@@ -4,6 +4,7 @@ import hashlib
 from retry import retry
 from dotenv import load_dotenv
 import logging
+from logger.logger import default_logger as logger
 from pathlib import Path
 import os
 

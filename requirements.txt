@@ -5,3 +5,4 @@ botocore
 retry
 python-dotenv
 python-terraform
+loguru
