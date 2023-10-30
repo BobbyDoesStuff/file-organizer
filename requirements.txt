@@ -1,8 +1,9 @@
-click==8.0.1
-boto3==1.28.7
+click
+boto3
 pytest
 botocore
 retry
 python-dotenv
 python-terraform
 loguru
+result
